@@ -53,6 +53,7 @@
 		A623F8F61E59DC1C008DF4EA /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623F8ED1E59DC1C008DF4EA /* SanFranciscoDisplay-Ultralight.otf */; };
 		A623F8F81E5A17A3008DF4EA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8F71E5A17A3008DF4EA /* RegisterViewController.swift */; };
 		A623F8FA1E5A17EC008DF4EA /* RestorePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8F91E5A17EC008DF4EA /* RestorePassViewController.swift */; };
+		A623F8FC1E5A1998008DF4EA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A623F8FB1E5A1998008DF4EA /* README.md */; };
 		F148075BBE5368ADA9574096 /* Pods_Volgafit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886C5F96F50D8D410DEB49E8 /* Pods_Volgafit.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		A623F8ED1E59DC1C008DF4EA /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
 		A623F8F71E5A17A3008DF4EA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A623F8F91E5A17EC008DF4EA /* RestorePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorePassViewController.swift; sourceTree = "<group>"; };
+		A623F8FB1E5A1998008DF4EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		A623F87C1E596FA3008DF4EA = {
 			isa = PBXGroup;
 			children = (
+				A623F8FB1E5A1998008DF4EA /* README.md */,
 				A623F89B1E597149008DF4EA /* Podfile */,
 				A623F8871E596FA3008DF4EA /* Volgafit */,
 				A623F8861E596FA3008DF4EA /* Products */,
@@ -433,6 +436,7 @@
 				A623F8FA1E5A17EC008DF4EA /* RestorePassViewController.swift in Sources */,
 				A623F8B31E597282008DF4EA /* HTTPStatusCode.swift in Sources */,
 				A623F8BE1E597282008DF4EA /* Workout.swift in Sources */,
+				A623F8FC1E5A1998008DF4EA /* README.md in Sources */,
 				A623F8AF1E597282008DF4EA /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
