@@ -1,26 +1,331 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7qw-9y-A2a">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Medium.otf">
+            <string>SanFranciscoDisplay-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="hb1-Mx-nRV">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="7qw-9y-A2a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="cPf-EK-ZP5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.80431228880000005" green="0.43480682370000001" blue="0.23399826879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IIO-qy-Aj8" kind="relationship" relationship="rootViewController" id="9Re-ys-AUR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2jy-hV-iqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="146"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="adE-yT-NEQ">
+            <objects>
+                <viewController id="IIO-qy-Aj8" customClass="LoginViewController" customModule="Volgafit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="HlY-B0-YZG"/>
+                        <viewControllerLayoutGuide type="bottom" id="8xs-Fi-CUK"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="IHG-bq-vIX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="RiU-fg-dPe">
+                                <rect key="frame" x="77" y="134" width="220" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="UGc-Lo-r4a"/>
+                                    <constraint firstAttribute="height" constant="100" id="Vv3-qT-1tX"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Адрес эл. почты" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1An-6S-Txm">
+                                <rect key="frame" x="77" y="269" width="220" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80028820040000004" blue="0.0040290672330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="INT-aM-0Cj"/>
+                                    <constraint firstAttribute="height" constant="30" id="r1r-zF-k13"/>
+                                </constraints>
+                                <color key="textColor" red="0.80431228880000005" green="0.43480682370000001" blue="0.23399826879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SS-0U-a9b">
+                                <rect key="frame" x="77" y="300" width="220" height="1"/>
+                                <color key="backgroundColor" red="0.38728475569999998" green="0.3815347254" blue="0.32762789730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="3ZY-zp-hBy"/>
+                                    <constraint firstAttribute="width" constant="220" id="oVZ-nn-ihF"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgw-RG-3pr">
+                                <rect key="frame" x="78" y="309" width="220" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80028820040000004" blue="0.0040290672330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="MG1-tC-5pA"/>
+                                    <constraint firstAttribute="height" constant="30" id="do5-0c-YLW"/>
+                                </constraints>
+                                <color key="textColor" red="0.80431228880000005" green="0.43480682370000001" blue="0.23399826879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESM-ip-yVu">
+                                <rect key="frame" x="77" y="340" width="220" height="1"/>
+                                <color key="backgroundColor" red="0.38728475569999998" green="0.3815347254" blue="0.32762789730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="UnE-yf-fRk"/>
+                                    <constraint firstAttribute="height" constant="1" id="eul-aA-1EB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCd-jS-Vds">
+                                <rect key="frame" x="77" y="356" width="220" height="30"/>
+                                <color key="backgroundColor" red="0.34525871279999998" green="0.33522459859999998" blue="0.2877805531" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="IKy-cZ-hQb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="OoZ-gj-ZfU"/>
+                                    <constraint firstAttribute="width" constant="220" id="U6i-W7-aQa"/>
+                                    <constraint firstAttribute="height" constant="30" id="bt2-6i-ykI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <state key="normal" title="Войти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwN-Di-9Rx">
+                                <rect key="frame" x="77" y="394" width="220" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2X7-Ja-Kv7"/>
+                                    <constraint firstAttribute="width" constant="220" id="3fC-lV-rbc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <state key="normal" title="Зарегистрироваться">
+                                    <color key="titleColor" red="0.80431228880000005" green="0.43480682370000001" blue="0.23399826879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eGV-3P-9TL" kind="show" identifier="toRegisterNewUser" id="yXT-At-kJd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFf-jC-R3S">
+                                <rect key="frame" x="78" y="432" width="220" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="fea-Uj-ci5"/>
+                                    <constraint firstAttribute="height" constant="30" id="iVU-pn-odm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <state key="normal" title="Забыли пароль?">
+                                    <color key="titleColor" red="0.80431228880000005" green="0.43480682370000001" blue="0.23399826879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hii-A9-wIl" kind="show" identifier="toRestorePassword" id="oQM-t2-5l6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80028820040000004" blue="0.0040290672330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OwN-Di-9Rx" firstAttribute="top" secondItem="MCd-jS-Vds" secondAttribute="bottom" constant="8" id="2kb-fi-Gs3"/>
+                            <constraint firstItem="2SS-0U-a9b" firstAttribute="top" secondItem="1An-6S-Txm" secondAttribute="bottom" constant="1" id="4EL-is-50f"/>
+                            <constraint firstItem="sgw-RG-3pr" firstAttribute="top" secondItem="2SS-0U-a9b" secondAttribute="bottom" constant="8" id="4o7-tG-Ckz"/>
+                            <constraint firstItem="ESM-ip-yVu" firstAttribute="top" secondItem="sgw-RG-3pr" secondAttribute="bottom" constant="1" id="F6J-Eb-elz"/>
+                            <constraint firstItem="sgw-RG-3pr" firstAttribute="centerX" secondItem="IHG-bq-vIX" secondAttribute="centerX" id="NCD-FP-IEa"/>
+                            <constraint firstItem="RiU-fg-dPe" firstAttribute="top" secondItem="HlY-B0-YZG" secondAttribute="bottom" constant="70" id="VWA-rx-9hM"/>
+                            <constraint firstItem="OFf-jC-R3S" firstAttribute="top" secondItem="OwN-Di-9Rx" secondAttribute="bottom" constant="8" id="aBl-Dm-NtG"/>
+                            <constraint firstItem="RiU-fg-dPe" firstAttribute="centerX" secondItem="IHG-bq-vIX" secondAttribute="centerX" id="bGZ-rv-hUP"/>
+                            <constraint firstItem="MCd-jS-Vds" firstAttribute="centerX" secondItem="IHG-bq-vIX" secondAttribute="centerX" id="bur-UB-b1s"/>
+                            <constraint firstItem="OwN-Di-9Rx" firstAttribute="centerX" secondItem="IHG-bq-vIX" secondAttribute="centerX" id="f3G-rQ-D0W"/>
+                            <constraint firstItem="MCd-jS-Vds" firstAttribute="top" secondItem="ESM-ip-yVu" secondAttribute="bottom" constant="15" id="fS1-8x-sNZ"/>
+                            <constraint firstItem="OFf-jC-R3S" firstAttribute="centerX" secondItem="IHG-bq-vIX" secondAttribute="centerX" id="hpt-B2-X2i"/>
+                            <constraint firstItem="ESM-ip-yVu" firstAttribute="centerX" secondItem="IHG-bq-vIX" secondAttribute="centerX" id="lPu-Fn-goi"/>
+                            <constraint firstItem="1An-6S-Txm" firstAttribute="centerX" secondItem="IHG-bq-vIX" secondAttribute="centerX" id="pne-eH-iEo"/>
+                            <constraint firstItem="1An-6S-Txm" firstAttribute="top" secondItem="RiU-fg-dPe" secondAttribute="bottom" constant="35" id="wCg-De-cD0"/>
+                            <constraint firstItem="2SS-0U-a9b" firstAttribute="centerX" secondItem="IHG-bq-vIX" secondAttribute="centerX" id="xkD-qe-UjS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KPB-7b-0bP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mza-lp-HTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82.400000000000006" y="144.3778110944528"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UOc-HM-MvU">
+            <objects>
+                <viewController id="hii-A9-wIl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ncj-I3-NUf"/>
+                        <viewControllerLayoutGuide type="bottom" id="qQj-rE-dao"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A43-4d-XPI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-ec-dKo">
+                                <rect key="frame" x="77" y="134" width="220" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="hTS-Z8-9Tz"/>
+                                    <constraint firstAttribute="width" constant="220" id="lEp-Fi-qtj"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kl1-6g-qbQ">
+                                <rect key="frame" x="77.5" y="300" width="220" height="1"/>
+                                <color key="backgroundColor" red="0.38728475569999998" green="0.3815347254" blue="0.32762789730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Eg6-U4-0Xc"/>
+                                    <constraint firstAttribute="width" constant="220" id="SeM-Vx-iBR"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZX-Gh-Amd">
+                                <rect key="frame" x="77.5" y="316" width="220" height="30"/>
+                                <color key="backgroundColor" red="0.34525871279999998" green="0.33522459859999998" blue="0.2877805531" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="C0b-Ik-kEf"/>
+                                    <constraint firstAttribute="height" constant="30" id="lLe-Mw-tY0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="o7L-kk-1Ve"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="pqd-Hw-TBi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <state key="normal" title="Восстановить пароль">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Адрес эл. почты" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJD-8h-NAv">
+                                <rect key="frame" x="77" y="269" width="220" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80028820040000004" blue="0.0040290672330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Apq-KL-Why"/>
+                                    <constraint firstAttribute="width" constant="220" id="fzE-Wz-ISD"/>
+                                </constraints>
+                                <color key="textColor" red="0.80431228880000005" green="0.43480682370000001" blue="0.23399826879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80028820040000004" blue="0.0040290672330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YJD-8h-NAv" firstAttribute="top" secondItem="uD4-ec-dKo" secondAttribute="bottom" constant="35" id="FoO-gS-JpV"/>
+                            <constraint firstItem="kl1-6g-qbQ" firstAttribute="top" secondItem="YJD-8h-NAv" secondAttribute="bottom" constant="1" id="HzD-Eb-Z7V"/>
+                            <constraint firstItem="YJD-8h-NAv" firstAttribute="centerX" secondItem="A43-4d-XPI" secondAttribute="centerX" id="Jfx-YN-u7A"/>
+                            <constraint firstItem="QZX-Gh-Amd" firstAttribute="top" secondItem="kl1-6g-qbQ" secondAttribute="bottom" constant="15" id="OI6-0r-Ktd"/>
+                            <constraint firstItem="QZX-Gh-Amd" firstAttribute="centerX" secondItem="A43-4d-XPI" secondAttribute="centerX" id="VMg-ZT-O4C"/>
+                            <constraint firstItem="kl1-6g-qbQ" firstAttribute="centerX" secondItem="A43-4d-XPI" secondAttribute="centerX" id="gOa-GD-0ac"/>
+                            <constraint firstItem="uD4-ec-dKo" firstAttribute="top" secondItem="Ncj-I3-NUf" secondAttribute="bottom" constant="70" id="gtw-13-D4L"/>
+                            <constraint firstItem="uD4-ec-dKo" firstAttribute="centerX" secondItem="A43-4d-XPI" secondAttribute="centerX" id="toy-wY-5qb"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rVN-z4-gQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-82" y="884"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8TG-ev-Go7">
+            <objects>
+                <viewController id="eGV-3P-9TL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ehr-cl-j7C"/>
+                        <viewControllerLayoutGuide type="bottom" id="QKo-XB-LfG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="npw-Fu-DZf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5Dq-Pp-MFM">
+                                <rect key="frame" x="77" y="134" width="220" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="UHT-dd-Fbi"/>
+                                    <constraint firstAttribute="height" constant="100" id="xbM-OT-ObO"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Адрес эл. почты" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L0e-fC-gwf">
+                                <rect key="frame" x="77" y="269" width="220" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80028820040000004" blue="0.0040290672330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KhZ-yI-hjo"/>
+                                    <constraint firstAttribute="width" constant="220" id="wJa-k2-bzr"/>
+                                </constraints>
+                                <color key="textColor" red="0.80431228880000005" green="0.43480682370000001" blue="0.23399826879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6Z-Cr-vCH">
+                                <rect key="frame" x="77.5" y="300" width="220" height="1"/>
+                                <color key="backgroundColor" red="0.38728475569999998" green="0.3815347254" blue="0.32762789730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2SN-SF-tZJ"/>
+                                    <constraint firstAttribute="width" constant="220" id="9kG-Rf-GWf"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVp-HA-8BO">
+                                <rect key="frame" x="77.5" y="309" width="220" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80028820040000004" blue="0.0040290672330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Atl-NH-bHB"/>
+                                    <constraint firstAttribute="width" constant="220" id="cHb-7x-Tqv"/>
+                                </constraints>
+                                <color key="textColor" red="0.80431228880000005" green="0.43480682370000001" blue="0.23399826879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9s-Sg-aeF">
+                                <rect key="frame" x="77" y="356" width="220" height="30"/>
+                                <color key="backgroundColor" red="0.34525871279999998" green="0.33522459859999998" blue="0.2877805531" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="Jsj-I0-aS7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="VND-OU-Lu0"/>
+                                    <constraint firstAttribute="width" constant="220" id="jYW-aX-WGm"/>
+                                    <constraint firstAttribute="height" constant="30" id="lq2-rb-gdV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                <state key="normal" title="Зарегистрировать">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfe-ld-uYW">
+                                <rect key="frame" x="77.5" y="340" width="220" height="1"/>
+                                <color key="backgroundColor" red="0.38728475569999998" green="0.3815347254" blue="0.32762789730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="8NK-3m-hh2"/>
+                                    <constraint firstAttribute="width" constant="220" id="fof-yf-VNL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80028820040000004" blue="0.0040290672330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Dq-Pp-MFM" firstAttribute="top" secondItem="Ehr-cl-j7C" secondAttribute="bottom" constant="70" id="2VO-9t-525"/>
+                            <constraint firstItem="L0e-fC-gwf" firstAttribute="centerX" secondItem="npw-Fu-DZf" secondAttribute="centerX" id="Hbk-CL-meN"/>
+                            <constraint firstItem="U6Z-Cr-vCH" firstAttribute="top" secondItem="L0e-fC-gwf" secondAttribute="bottom" constant="1" id="KGc-kh-77x"/>
+                            <constraint firstItem="o9s-Sg-aeF" firstAttribute="top" secondItem="Hfe-ld-uYW" secondAttribute="bottom" constant="15" id="LMw-Bk-pJJ"/>
+                            <constraint firstItem="U6Z-Cr-vCH" firstAttribute="centerX" secondItem="npw-Fu-DZf" secondAttribute="centerX" id="MgF-E0-Vn5"/>
+                            <constraint firstItem="5Dq-Pp-MFM" firstAttribute="centerX" secondItem="npw-Fu-DZf" secondAttribute="centerX" id="PDX-LD-dLb"/>
+                            <constraint firstItem="o9s-Sg-aeF" firstAttribute="centerX" secondItem="npw-Fu-DZf" secondAttribute="centerX" id="PuO-Gg-GyA"/>
+                            <constraint firstItem="Hfe-ld-uYW" firstAttribute="centerX" secondItem="npw-Fu-DZf" secondAttribute="centerX" id="Rya-Hq-rRV"/>
+                            <constraint firstItem="wVp-HA-8BO" firstAttribute="top" secondItem="U6Z-Cr-vCH" secondAttribute="bottom" constant="8" id="XdN-uI-sbH"/>
+                            <constraint firstItem="L0e-fC-gwf" firstAttribute="top" secondItem="5Dq-Pp-MFM" secondAttribute="bottom" constant="35" id="n3R-nR-fv4"/>
+                            <constraint firstItem="Hfe-ld-uYW" firstAttribute="top" secondItem="wVp-HA-8BO" secondAttribute="bottom" constant="1" id="wJw-X7-Fde"/>
+                            <constraint firstItem="wVp-HA-8BO" firstAttribute="centerX" secondItem="npw-Fu-DZf" secondAttribute="centerX" id="ztM-Qs-puS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yzl-Re-7sU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644" y="143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="371" height="138"/>
+    </resources>
 </document>

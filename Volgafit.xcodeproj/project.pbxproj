@@ -8,20 +8,106 @@
 
 /* Begin PBXBuildFile section */
 		A623F8891E596FA3008DF4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8881E596FA3008DF4EA /* AppDelegate.swift */; };
-		A623F88B1E596FA3008DF4EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F88A1E596FA3008DF4EA /* ViewController.swift */; };
+		A623F88B1E596FA3008DF4EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F88A1E596FA3008DF4EA /* LoginViewController.swift */; };
 		A623F88E1E596FA3008DF4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A623F88C1E596FA3008DF4EA /* Main.storyboard */; };
 		A623F8901E596FA3008DF4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A623F88F1E596FA3008DF4EA /* Assets.xcassets */; };
 		A623F8931E596FA3008DF4EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A623F8911E596FA3008DF4EA /* LaunchScreen.storyboard */; };
+		A623F89C1E597149008DF4EA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A623F89B1E597149008DF4EA /* Podfile */; };
+		A623F89E1E5971F6008DF4EA /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F89D1E5971F6008DF4EA /* JSON.swift */; };
+		A623F8AF1E597282008DF4EA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F89F1E597282008DF4EA /* APIClient.swift */; };
+		A623F8B01E597282008DF4EA /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A01E597282008DF4EA /* APIError.swift */; };
+		A623F8B11E597282008DF4EA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A11E597282008DF4EA /* Client.swift */; };
+		A623F8B21E597282008DF4EA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A21E597282008DF4EA /* Endpoint.swift */; };
+		A623F8B31E597282008DF4EA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A31E597282008DF4EA /* HTTPStatusCode.swift */; };
+		A623F8B41E597282008DF4EA /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A41E597282008DF4EA /* Info.swift */; };
+		A623F8B51E597282008DF4EA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A51E597282008DF4EA /* Model.swift */; };
+		A623F8B61E597282008DF4EA /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A61E597282008DF4EA /* News.swift */; };
+		A623F8B81E597282008DF4EA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A81E597282008DF4EA /* Person.swift */; };
+		A623F8B91E597282008DF4EA /* PrettyPrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A91E597282008DF4EA /* PrettyPrintable.swift */; };
+		A623F8BB1E597282008DF4EA /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8AB1E597282008DF4EA /* Trainer.swift */; };
+		A623F8BD1E597282008DF4EA /* VolgofitEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8AD1E597282008DF4EA /* VolgofitEndpoint.swift */; };
+		A623F8BE1E597282008DF4EA /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8AE1E597282008DF4EA /* Workout.swift */; };
+		A623F8C41E5976D5008DF4EA /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8C31E5976D5008DF4EA /* Role.swift */; };
+		A623F8C61E597752008DF4EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8C51E597752008DF4EA /* User.swift */; };
+		A623F8D41E599D69008DF4EA /* 01_Загрузка.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A623F8C81E599D69008DF4EA /* 01_Загрузка.jpg */; };
+		A623F8D51E599D69008DF4EA /* 01_Загрузка.psd in Resources */ = {isa = PBXBuildFile; fileRef = A623F8C91E599D69008DF4EA /* 01_Загрузка.psd */; };
+		A623F8D61E599D69008DF4EA /* 02_Вход.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A623F8CA1E599D69008DF4EA /* 02_Вход.jpg */; };
+		A623F8D71E599D69008DF4EA /* 02_Вход.psd in Resources */ = {isa = PBXBuildFile; fileRef = A623F8CB1E599D69008DF4EA /* 02_Вход.psd */; };
+		A623F8D81E599D69008DF4EA /* 03_Создание пользователя.psd in Resources */ = {isa = PBXBuildFile; fileRef = A623F8CC1E599D69008DF4EA /* 03_Создание пользователя.psd */; };
+		A623F8D91E599D69008DF4EA /* 03_Создание-пользователя.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A623F8CD1E599D69008DF4EA /* 03_Создание-пользователя.jpg */; };
+		A623F8DA1E599D69008DF4EA /* 04_Профиль.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A623F8CE1E599D69008DF4EA /* 04_Профиль.jpg */; };
+		A623F8DB1E599D69008DF4EA /* 04_Профиль.psd in Resources */ = {isa = PBXBuildFile; fileRef = A623F8CF1E599D69008DF4EA /* 04_Профиль.psd */; };
+		A623F8DC1E599D69008DF4EA /* 05_О_клубе.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A623F8D01E599D69008DF4EA /* 05_О_клубе.jpg */; };
+		A623F8DD1E599D69008DF4EA /* 05_О_клубе.psd in Resources */ = {isa = PBXBuildFile; fileRef = A623F8D11E599D69008DF4EA /* 05_О_клубе.psd */; };
+		A623F8DE1E599D69008DF4EA /* 06_Новости.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A623F8D21E599D69008DF4EA /* 06_Новости.jpg */; };
+		A623F8DF1E599D69008DF4EA /* 06_Новости.psd in Resources */ = {isa = PBXBuildFile; fileRef = A623F8D31E599D69008DF4EA /* 06_Новости.psd */; };
+		A623F8E11E59D485008DF4EA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8E01E59D485008DF4EA /* AppConstants.swift */; };
+		A623F8EE1E59DC1C008DF4EA /* SanFranciscoDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623F8E51E59DC1C008DF4EA /* SanFranciscoDisplay-Black.otf */; };
+		A623F8EF1E59DC1C008DF4EA /* SanFranciscoDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623F8E61E59DC1C008DF4EA /* SanFranciscoDisplay-Bold.otf */; };
+		A623F8F01E59DC1C008DF4EA /* SanFranciscoDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623F8E71E59DC1C008DF4EA /* SanFranciscoDisplay-Heavy.otf */; };
+		A623F8F11E59DC1C008DF4EA /* SanFranciscoDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623F8E81E59DC1C008DF4EA /* SanFranciscoDisplay-Light.otf */; };
+		A623F8F21E59DC1C008DF4EA /* SanFranciscoDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623F8E91E59DC1C008DF4EA /* SanFranciscoDisplay-Medium.otf */; };
+		A623F8F31E59DC1C008DF4EA /* SanFranciscoDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623F8EA1E59DC1C008DF4EA /* SanFranciscoDisplay-Regular.otf */; };
+		A623F8F41E59DC1C008DF4EA /* SanFranciscoDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623F8EB1E59DC1C008DF4EA /* SanFranciscoDisplay-Semibold.otf */; };
+		A623F8F51E59DC1C008DF4EA /* SanFranciscoDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623F8EC1E59DC1C008DF4EA /* SanFranciscoDisplay-Thin.otf */; };
+		A623F8F61E59DC1C008DF4EA /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623F8ED1E59DC1C008DF4EA /* SanFranciscoDisplay-Ultralight.otf */; };
+		A623F8F81E5A17A3008DF4EA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8F71E5A17A3008DF4EA /* RegisterViewController.swift */; };
+		A623F8FA1E5A17EC008DF4EA /* RestorePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8F91E5A17EC008DF4EA /* RestorePassViewController.swift */; };
+		F148075BBE5368ADA9574096 /* Pods_Volgafit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886C5F96F50D8D410DEB49E8 /* Pods_Volgafit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		553B7CB4BFFD4550A894F281 /* Pods-Volgafit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volgafit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Volgafit/Pods-Volgafit.release.xcconfig"; sourceTree = "<group>"; };
+		82DDDE7840FED793417E03FB /* Pods-Volgafit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volgafit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Volgafit/Pods-Volgafit.debug.xcconfig"; sourceTree = "<group>"; };
+		886C5F96F50D8D410DEB49E8 /* Pods_Volgafit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volgafit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A623F8851E596FA3008DF4EA /* Volgafit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volgafit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A623F8881E596FA3008DF4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A623F88A1E596FA3008DF4EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A623F88A1E596FA3008DF4EA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A623F88D1E596FA3008DF4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A623F88F1E596FA3008DF4EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A623F8921E596FA3008DF4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A623F8941E596FA3008DF4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A623F89B1E597149008DF4EA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A623F89D1E5971F6008DF4EA /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		A623F89F1E597282008DF4EA /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A623F8A01E597282008DF4EA /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		A623F8A11E597282008DF4EA /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		A623F8A21E597282008DF4EA /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		A623F8A31E597282008DF4EA /* HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		A623F8A41E597282008DF4EA /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		A623F8A51E597282008DF4EA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A623F8A61E597282008DF4EA /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		A623F8A81E597282008DF4EA /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A623F8A91E597282008DF4EA /* PrettyPrintable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyPrintable.swift; sourceTree = "<group>"; };
+		A623F8AB1E597282008DF4EA /* Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
+		A623F8AD1E597282008DF4EA /* VolgofitEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolgofitEndpoint.swift; sourceTree = "<group>"; };
+		A623F8AE1E597282008DF4EA /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		A623F8C31E5976D5008DF4EA /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		A623F8C51E597752008DF4EA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A623F8C81E599D69008DF4EA /* 01_Загрузка.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01_Загрузка.jpg"; sourceTree = "<group>"; };
+		A623F8C91E599D69008DF4EA /* 01_Загрузка.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01_Загрузка.psd"; sourceTree = "<group>"; };
+		A623F8CA1E599D69008DF4EA /* 02_Вход.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "02_Вход.jpg"; sourceTree = "<group>"; };
+		A623F8CB1E599D69008DF4EA /* 02_Вход.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02_Вход.psd"; sourceTree = "<group>"; };
+		A623F8CC1E599D69008DF4EA /* 03_Создание пользователя.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03_Создание пользователя.psd"; sourceTree = "<group>"; };
+		A623F8CD1E599D69008DF4EA /* 03_Создание-пользователя.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "03_Создание-пользователя.jpg"; sourceTree = "<group>"; };
+		A623F8CE1E599D69008DF4EA /* 04_Профиль.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04_Профиль.jpg"; sourceTree = "<group>"; };
+		A623F8CF1E599D69008DF4EA /* 04_Профиль.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04_Профиль.psd"; sourceTree = "<group>"; };
+		A623F8D01E599D69008DF4EA /* 05_О_клубе.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "05_О_клубе.jpg"; sourceTree = "<group>"; };
+		A623F8D11E599D69008DF4EA /* 05_О_клубе.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "05_О_клубе.psd"; sourceTree = "<group>"; };
+		A623F8D21E599D69008DF4EA /* 06_Новости.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "06_Новости.jpg"; sourceTree = "<group>"; };
+		A623F8D31E599D69008DF4EA /* 06_Новости.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "06_Новости.psd"; sourceTree = "<group>"; };
+		A623F8E01E59D485008DF4EA /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		A623F8E51E59DC1C008DF4EA /* SanFranciscoDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Black.otf"; sourceTree = "<group>"; };
+		A623F8E61E59DC1C008DF4EA /* SanFranciscoDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Bold.otf"; sourceTree = "<group>"; };
+		A623F8E71E59DC1C008DF4EA /* SanFranciscoDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Heavy.otf"; sourceTree = "<group>"; };
+		A623F8E81E59DC1C008DF4EA /* SanFranciscoDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Light.otf"; sourceTree = "<group>"; };
+		A623F8E91E59DC1C008DF4EA /* SanFranciscoDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Medium.otf"; sourceTree = "<group>"; };
+		A623F8EA1E59DC1C008DF4EA /* SanFranciscoDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Regular.otf"; sourceTree = "<group>"; };
+		A623F8EB1E59DC1C008DF4EA /* SanFranciscoDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Semibold.otf"; sourceTree = "<group>"; };
+		A623F8EC1E59DC1C008DF4EA /* SanFranciscoDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Thin.otf"; sourceTree = "<group>"; };
+		A623F8ED1E59DC1C008DF4EA /* SanFranciscoDisplay-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Ultralight.otf"; sourceTree = "<group>"; };
+		A623F8F71E5A17A3008DF4EA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A623F8F91E5A17EC008DF4EA /* RestorePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorePassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +115,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F148075BBE5368ADA9574096 /* Pods_Volgafit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72DA6F04922F12027E38A98E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				886C5F96F50D8D410DEB49E8 /* Pods_Volgafit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A623F87C1E596FA3008DF4EA = {
 			isa = PBXGroup;
 			children = (
+				A623F89B1E597149008DF4EA /* Podfile */,
 				A623F8871E596FA3008DF4EA /* Volgafit */,
 				A623F8861E596FA3008DF4EA /* Products */,
+				C3272E628D4661F8AD8993C9 /* Pods */,
+				72DA6F04922F12027E38A98E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +152,119 @@
 		A623F8871E596FA3008DF4EA /* Volgafit */ = {
 			isa = PBXGroup;
 			children = (
-				A623F8881E596FA3008DF4EA /* AppDelegate.swift */,
-				A623F88A1E596FA3008DF4EA /* ViewController.swift */,
-				A623F88C1E596FA3008DF4EA /* Main.storyboard */,
-				A623F88F1E596FA3008DF4EA /* Assets.xcassets */,
-				A623F8911E596FA3008DF4EA /* LaunchScreen.storyboard */,
-				A623F8941E596FA3008DF4EA /* Info.plist */,
+				A623F8BF1E59728E008DF4EA /* Model */,
+				A623F8C11E5972B7008DF4EA /* Controllers */,
+				A623F8C01E59729B008DF4EA /* API */,
+				A623F89A1E596FC5008DF4EA /* SupplyingFiles */,
+				A623F8E01E59D485008DF4EA /* AppConstants.swift */,
 			);
 			path = Volgafit;
+			sourceTree = "<group>";
+		};
+		A623F89A1E596FC5008DF4EA /* SupplyingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A623F8C71E599D44008DF4EA /* Mocups */,
+				A623F8E41E59DBFD008DF4EA /* Fonts */,
+				A623F88C1E596FA3008DF4EA /* Main.storyboard */,
+				A623F8911E596FA3008DF4EA /* LaunchScreen.storyboard */,
+				A623F8941E596FA3008DF4EA /* Info.plist */,
+				A623F88F1E596FA3008DF4EA /* Assets.xcassets */,
+				A623F8881E596FA3008DF4EA /* AppDelegate.swift */,
+			);
+			name = SupplyingFiles;
+			sourceTree = "<group>";
+		};
+		A623F8BF1E59728E008DF4EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A623F89D1E5971F6008DF4EA /* JSON.swift */,
+				A623F8A91E597282008DF4EA /* PrettyPrintable.swift */,
+				A623F8C21E5972D6008DF4EA /* Resources */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A623F8C01E59729B008DF4EA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A623F8AD1E597282008DF4EA /* VolgofitEndpoint.swift */,
+				A623F8A21E597282008DF4EA /* Endpoint.swift */,
+				A623F89F1E597282008DF4EA /* APIClient.swift */,
+				A623F8A31E597282008DF4EA /* HTTPStatusCode.swift */,
+				A623F8A01E597282008DF4EA /* APIError.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		A623F8C11E5972B7008DF4EA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A623F88A1E596FA3008DF4EA /* LoginViewController.swift */,
+				A623F8F71E5A17A3008DF4EA /* RegisterViewController.swift */,
+				A623F8F91E5A17EC008DF4EA /* RestorePassViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A623F8C21E5972D6008DF4EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A623F8AB1E597282008DF4EA /* Trainer.swift */,
+				A623F8AE1E597282008DF4EA /* Workout.swift */,
+				A623F8A11E597282008DF4EA /* Client.swift */,
+				A623F8A41E597282008DF4EA /* Info.swift */,
+				A623F8A51E597282008DF4EA /* Model.swift */,
+				A623F8A61E597282008DF4EA /* News.swift */,
+				A623F8A81E597282008DF4EA /* Person.swift */,
+				A623F8C31E5976D5008DF4EA /* Role.swift */,
+				A623F8C51E597752008DF4EA /* User.swift */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A623F8C71E599D44008DF4EA /* Mocups */ = {
+			isa = PBXGroup;
+			children = (
+				A623F8C81E599D69008DF4EA /* 01_Загрузка.jpg */,
+				A623F8C91E599D69008DF4EA /* 01_Загрузка.psd */,
+				A623F8CA1E599D69008DF4EA /* 02_Вход.jpg */,
+				A623F8CB1E599D69008DF4EA /* 02_Вход.psd */,
+				A623F8CC1E599D69008DF4EA /* 03_Создание пользователя.psd */,
+				A623F8CD1E599D69008DF4EA /* 03_Создание-пользователя.jpg */,
+				A623F8CE1E599D69008DF4EA /* 04_Профиль.jpg */,
+				A623F8CF1E599D69008DF4EA /* 04_Профиль.psd */,
+				A623F8D01E599D69008DF4EA /* 05_О_клубе.jpg */,
+				A623F8D11E599D69008DF4EA /* 05_О_клубе.psd */,
+				A623F8D21E599D69008DF4EA /* 06_Новости.jpg */,
+				A623F8D31E599D69008DF4EA /* 06_Новости.psd */,
+			);
+			name = Mocups;
+			sourceTree = "<group>";
+		};
+		A623F8E41E59DBFD008DF4EA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A623F8E51E59DC1C008DF4EA /* SanFranciscoDisplay-Black.otf */,
+				A623F8E61E59DC1C008DF4EA /* SanFranciscoDisplay-Bold.otf */,
+				A623F8E71E59DC1C008DF4EA /* SanFranciscoDisplay-Heavy.otf */,
+				A623F8E81E59DC1C008DF4EA /* SanFranciscoDisplay-Light.otf */,
+				A623F8E91E59DC1C008DF4EA /* SanFranciscoDisplay-Medium.otf */,
+				A623F8EA1E59DC1C008DF4EA /* SanFranciscoDisplay-Regular.otf */,
+				A623F8EB1E59DC1C008DF4EA /* SanFranciscoDisplay-Semibold.otf */,
+				A623F8EC1E59DC1C008DF4EA /* SanFranciscoDisplay-Thin.otf */,
+				A623F8ED1E59DC1C008DF4EA /* SanFranciscoDisplay-Ultralight.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		C3272E628D4661F8AD8993C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82DDDE7840FED793417E03FB /* Pods-Volgafit.debug.xcconfig */,
+				553B7CB4BFFD4550A894F281 /* Pods-Volgafit.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +274,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A623F8971E596FA3008DF4EA /* Build configuration list for PBXNativeTarget "Volgafit" */;
 			buildPhases = (
+				5F82DC86C20BE64CAEE0C3DC /* [CP] Check Pods Manifest.lock */,
 				A623F8811E596FA3008DF4EA /* Sources */,
 				A623F8821E596FA3008DF4EA /* Frameworks */,
 				A623F8831E596FA3008DF4EA /* Resources */,
+				B1F7CCA43E0AF33A2C33E34F /* [CP] Embed Pods Frameworks */,
+				32DB861A97D949B3AC561726 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,20 +331,109 @@
 			buildActionMask = 2147483647;
 			files = (
 				A623F8931E596FA3008DF4EA /* LaunchScreen.storyboard in Resources */,
+				A623F8DE1E599D69008DF4EA /* 06_Новости.jpg in Resources */,
+				A623F8DA1E599D69008DF4EA /* 04_Профиль.jpg in Resources */,
+				A623F8F51E59DC1C008DF4EA /* SanFranciscoDisplay-Thin.otf in Resources */,
+				A623F8EF1E59DC1C008DF4EA /* SanFranciscoDisplay-Bold.otf in Resources */,
 				A623F8901E596FA3008DF4EA /* Assets.xcassets in Resources */,
+				A623F8F31E59DC1C008DF4EA /* SanFranciscoDisplay-Regular.otf in Resources */,
+				A623F8EE1E59DC1C008DF4EA /* SanFranciscoDisplay-Black.otf in Resources */,
+				A623F8D91E599D69008DF4EA /* 03_Создание-пользователя.jpg in Resources */,
+				A623F8D71E599D69008DF4EA /* 02_Вход.psd in Resources */,
+				A623F8D81E599D69008DF4EA /* 03_Создание пользователя.psd in Resources */,
+				A623F8DD1E599D69008DF4EA /* 05_О_клубе.psd in Resources */,
+				A623F8DC1E599D69008DF4EA /* 05_О_клубе.jpg in Resources */,
+				A623F8D51E599D69008DF4EA /* 01_Загрузка.psd in Resources */,
+				A623F8D61E599D69008DF4EA /* 02_Вход.jpg in Resources */,
+				A623F8F61E59DC1C008DF4EA /* SanFranciscoDisplay-Ultralight.otf in Resources */,
+				A623F89C1E597149008DF4EA /* Podfile in Resources */,
+				A623F8F01E59DC1C008DF4EA /* SanFranciscoDisplay-Heavy.otf in Resources */,
 				A623F88E1E596FA3008DF4EA /* Main.storyboard in Resources */,
+				A623F8F21E59DC1C008DF4EA /* SanFranciscoDisplay-Medium.otf in Resources */,
+				A623F8DB1E599D69008DF4EA /* 04_Профиль.psd in Resources */,
+				A623F8F41E59DC1C008DF4EA /* SanFranciscoDisplay-Semibold.otf in Resources */,
+				A623F8F11E59DC1C008DF4EA /* SanFranciscoDisplay-Light.otf in Resources */,
+				A623F8DF1E599D69008DF4EA /* 06_Новости.psd in Resources */,
+				A623F8D41E599D69008DF4EA /* 01_Загрузка.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32DB861A97D949B3AC561726 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Volgafit/Pods-Volgafit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F82DC86C20BE64CAEE0C3DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B1F7CCA43E0AF33A2C33E34F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Volgafit/Pods-Volgafit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A623F8811E596FA3008DF4EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A623F88B1E596FA3008DF4EA /* ViewController.swift in Sources */,
+				A623F8E11E59D485008DF4EA /* AppConstants.swift in Sources */,
+				A623F8B21E597282008DF4EA /* Endpoint.swift in Sources */,
+				A623F8BD1E597282008DF4EA /* VolgofitEndpoint.swift in Sources */,
+				A623F8C41E5976D5008DF4EA /* Role.swift in Sources */,
+				A623F89E1E5971F6008DF4EA /* JSON.swift in Sources */,
+				A623F88B1E596FA3008DF4EA /* LoginViewController.swift in Sources */,
+				A623F8B41E597282008DF4EA /* Info.swift in Sources */,
+				A623F8B11E597282008DF4EA /* Client.swift in Sources */,
+				A623F8B51E597282008DF4EA /* Model.swift in Sources */,
+				A623F8B61E597282008DF4EA /* News.swift in Sources */,
+				A623F8B91E597282008DF4EA /* PrettyPrintable.swift in Sources */,
+				A623F8F81E5A17A3008DF4EA /* RegisterViewController.swift in Sources */,
 				A623F8891E596FA3008DF4EA /* AppDelegate.swift in Sources */,
+				A623F8B01E597282008DF4EA /* APIError.swift in Sources */,
+				A623F8B81E597282008DF4EA /* Person.swift in Sources */,
+				A623F8BB1E597282008DF4EA /* Trainer.swift in Sources */,
+				A623F8C61E597752008DF4EA /* User.swift in Sources */,
+				A623F8FA1E5A17EC008DF4EA /* RestorePassViewController.swift in Sources */,
+				A623F8B31E597282008DF4EA /* HTTPStatusCode.swift in Sources */,
+				A623F8BE1E597282008DF4EA /* Workout.swift in Sources */,
+				A623F8AF1E597282008DF4EA /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +554,7 @@
 		};
 		A623F8981E596FA3008DF4EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82DDDE7840FED793417E03FB /* Pods-Volgafit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RS93W547X8;
@@ -272,6 +568,7 @@
 		};
 		A623F8991E596FA3008DF4EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 553B7CB4BFFD4550A894F281 /* Pods-Volgafit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RS93W547X8;
@@ -302,6 +599,7 @@
 				A623F8991E596FA3008DF4EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
