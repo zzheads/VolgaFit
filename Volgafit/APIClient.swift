@@ -16,11 +16,15 @@ class APIClient {
             if let value = response.result.value, let serverError = ServerError(with: value as! JSON) {
                 print("\(serverError.prettyPrint(with: 0))")
             } else {
-                if let statusCode = HTTPStatusCode(rawValue: (response.response?.statusCode)!), let error = response.result.error {
-                    print("Error while fetching: \(error) \(APIError.httpResponseStatusCodeError(statusCode).localizedDescription)")
-                } else {
-                    print("Unknown error while fetching")
+                guard
+                let httpResponse = response.response,
+                let statusCode = HTTPStatusCode(rawValue: httpResponse.statusCode),
+                let error = response.result.error
+                    else {
+                        print("Unknown error while fetching")
+                        return
                 }
+                print("Error while fetching: \(error) \(APIError.httpResponseStatusCodeError(statusCode).localizedDescription)")
             }
             completion(nil)
         }

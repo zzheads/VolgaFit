@@ -18,7 +18,7 @@
         <scene sceneID="hb1-Mx-nRV">
             <objects>
                 <navigationController id="7qw-9y-A2a" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="cPf-EK-ZP5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="cPf-EK-ZP5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -105,6 +105,9 @@
                                 <state key="normal" title="Войти">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="IIO-qy-Aj8" eventType="touchUpInside" id="d2a-Ul-YnD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwN-Di-9Rx">
                                 <rect key="frame" x="77" y="394" width="220" height="30"/>
@@ -156,15 +159,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KPB-7b-0bP"/>
+                    <connections>
+                        <outlet property="passwordTF" destination="sgw-RG-3pr" id="AJS-M9-lbT"/>
+                        <outlet property="usernameTF" destination="1An-6S-Txm" id="RYf-g1-aJa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mza-lp-HTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-82.400000000000006" y="144.3778110944528"/>
         </scene>
-        <!--View Controller-->
+        <!--Restore Pass View Controller-->
         <scene sceneID="UOc-HM-MvU">
             <objects>
-                <viewController id="hii-A9-wIl" sceneMemberID="viewController">
+                <viewController id="hii-A9-wIl" customClass="RestorePassViewController" customModule="Volgafit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ncj-I3-NUf"/>
                         <viewControllerLayoutGuide type="bottom" id="qQj-rE-dao"/>
@@ -201,6 +208,9 @@
                                 <state key="normal" title="Восстановить пароль">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="restoreButtonPressed:" destination="hii-A9-wIl" eventType="touchUpInside" id="dgr-Wp-eur"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Адрес эл. почты" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJD-8h-NAv">
                                 <rect key="frame" x="77" y="269" width="220" height="30"/>
@@ -226,15 +236,18 @@
                             <constraint firstItem="uD4-ec-dKo" firstAttribute="centerX" secondItem="A43-4d-XPI" secondAttribute="centerX" id="toy-wY-5qb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="usernameTF" destination="YJD-8h-NAv" id="aCc-tm-dE2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVN-z4-gQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-82" y="884"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="8TG-ev-Go7">
             <objects>
-                <viewController id="eGV-3P-9TL" sceneMemberID="viewController">
+                <viewController id="eGV-3P-9TL" customClass="RegisterViewController" customModule="Volgafit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ehr-cl-j7C"/>
                         <viewControllerLayoutGuide type="bottom" id="QKo-XB-LfG"/>
@@ -293,6 +306,9 @@
                                 <state key="normal" title="Зарегистрировать">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="eGV-3P-9TL" eventType="touchUpInside" id="1lb-iT-Aad"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfe-ld-uYW">
                                 <rect key="frame" x="77.5" y="340" width="220" height="1"/>
@@ -319,6 +335,10 @@
                             <constraint firstItem="wVp-HA-8BO" firstAttribute="centerX" secondItem="npw-Fu-DZf" secondAttribute="centerX" id="ztM-Qs-puS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTF" destination="wVp-HA-8BO" id="1lg-zt-BNl"/>
+                        <outlet property="usernameTF" destination="L0e-fC-gwf" id="WRO-ar-Wr2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzl-Re-7sU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

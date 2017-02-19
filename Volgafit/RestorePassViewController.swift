@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 class RestorePassViewController: UIViewController {
+    
+    @IBOutlet weak var usernameTF: UITextField!
+    @IBAction func restoreButtonPressed(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

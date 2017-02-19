@@ -54,6 +54,7 @@
 		A623F8F81E5A17A3008DF4EA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8F71E5A17A3008DF4EA /* RegisterViewController.swift */; };
 		A623F8FA1E5A17EC008DF4EA /* RestorePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8F91E5A17EC008DF4EA /* RestorePassViewController.swift */; };
 		A623F8FC1E5A1998008DF4EA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A623F8FB1E5A1998008DF4EA /* README.md */; };
+		A623F8FF1E5A2879008DF4EA /* UIViewController +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8FE1E5A2879008DF4EA /* UIViewController +.swift */; };
 		F148075BBE5368ADA9574096 /* Pods_Volgafit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886C5F96F50D8D410DEB49E8 /* Pods_Volgafit.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		A623F8F71E5A17A3008DF4EA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A623F8F91E5A17EC008DF4EA /* RestorePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorePassViewController.swift; sourceTree = "<group>"; };
 		A623F8FB1E5A1998008DF4EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A623F8FE1E5A2879008DF4EA /* UIViewController +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController +.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		A623F8871E596FA3008DF4EA /* Volgafit */ = {
 			isa = PBXGroup;
 			children = (
+				A623F8FD1E5A285F008DF4EA /* Helpers */,
 				A623F8BF1E59728E008DF4EA /* Model */,
 				A623F8C11E5972B7008DF4EA /* Controllers */,
 				A623F8C01E59729B008DF4EA /* API */,
@@ -259,6 +262,14 @@
 				A623F8ED1E59DC1C008DF4EA /* SanFranciscoDisplay-Ultralight.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		A623F8FD1E5A285F008DF4EA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A623F8FE1E5A2879008DF4EA /* UIViewController +.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		C3272E628D4661F8AD8993C9 /* Pods */ = {
@@ -432,6 +443,7 @@
 				A623F8B01E597282008DF4EA /* APIError.swift in Sources */,
 				A623F8B81E597282008DF4EA /* Person.swift in Sources */,
 				A623F8BB1E597282008DF4EA /* Trainer.swift in Sources */,
+				A623F8FF1E5A2879008DF4EA /* UIViewController +.swift in Sources */,
 				A623F8C61E597752008DF4EA /* User.swift in Sources */,
 				A623F8FA1E5A17EC008DF4EA /* RestorePassViewController.swift in Sources */,
 				A623F8B31E597282008DF4EA /* HTTPStatusCode.swift in Sources */,
@@ -563,6 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RS93W547X8;
 				INFOPLIST_FILE = Volgafit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzheads.Volgafit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -577,6 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RS93W547X8;
 				INFOPLIST_FILE = Volgafit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zzheads.Volgafit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
