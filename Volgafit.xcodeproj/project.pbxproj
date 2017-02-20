@@ -16,15 +16,12 @@
 		A623F89E1E5971F6008DF4EA /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F89D1E5971F6008DF4EA /* JSON.swift */; };
 		A623F8AF1E597282008DF4EA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F89F1E597282008DF4EA /* APIClient.swift */; };
 		A623F8B01E597282008DF4EA /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A01E597282008DF4EA /* APIError.swift */; };
-		A623F8B11E597282008DF4EA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A11E597282008DF4EA /* Client.swift */; };
 		A623F8B21E597282008DF4EA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A21E597282008DF4EA /* Endpoint.swift */; };
 		A623F8B31E597282008DF4EA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A31E597282008DF4EA /* HTTPStatusCode.swift */; };
 		A623F8B41E597282008DF4EA /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A41E597282008DF4EA /* Info.swift */; };
 		A623F8B51E597282008DF4EA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A51E597282008DF4EA /* Model.swift */; };
 		A623F8B61E597282008DF4EA /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A61E597282008DF4EA /* News.swift */; };
-		A623F8B81E597282008DF4EA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A81E597282008DF4EA /* Person.swift */; };
 		A623F8B91E597282008DF4EA /* PrettyPrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A91E597282008DF4EA /* PrettyPrintable.swift */; };
-		A623F8BB1E597282008DF4EA /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8AB1E597282008DF4EA /* Trainer.swift */; };
 		A623F8BD1E597282008DF4EA /* VolgofitEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8AD1E597282008DF4EA /* VolgofitEndpoint.swift */; };
 		A623F8BE1E597282008DF4EA /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8AE1E597282008DF4EA /* Workout.swift */; };
 		A623F8C41E5976D5008DF4EA /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8C31E5976D5008DF4EA /* Role.swift */; };
@@ -53,8 +50,11 @@
 		A623F8F61E59DC1C008DF4EA /* SanFranciscoDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A623F8ED1E59DC1C008DF4EA /* SanFranciscoDisplay-Ultralight.otf */; };
 		A623F8F81E5A17A3008DF4EA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8F71E5A17A3008DF4EA /* RegisterViewController.swift */; };
 		A623F8FA1E5A17EC008DF4EA /* RestorePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8F91E5A17EC008DF4EA /* RestorePassViewController.swift */; };
-		A623F8FC1E5A1998008DF4EA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A623F8FB1E5A1998008DF4EA /* README.md */; };
 		A623F8FF1E5A2879008DF4EA /* UIViewController +.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8FE1E5A2879008DF4EA /* UIViewController +.swift */; };
+		A62542C91E5AC4E20093D09C /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62542C81E5AC4E20093D09C /* ApiResult.swift */; };
+		A62542CD1E5AE69E0093D09C /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62542CC1E5AE69E0093D09C /* NewsViewController.swift */; };
+		A6E3D8C91E5B3A8600695F8B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E3D8C81E5B3A8600695F8B /* Profile.swift */; };
+		A6E3D8CD1E5B6C6D00695F8B /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E3D8CC1E5B6C6D00695F8B /* EditProfileViewController.swift */; };
 		F148075BBE5368ADA9574096 /* Pods_Volgafit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886C5F96F50D8D410DEB49E8 /* Pods_Volgafit.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,15 +73,12 @@
 		A623F89D1E5971F6008DF4EA /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		A623F89F1E597282008DF4EA /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A623F8A01E597282008DF4EA /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		A623F8A11E597282008DF4EA /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		A623F8A21E597282008DF4EA /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A623F8A31E597282008DF4EA /* HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		A623F8A41E597282008DF4EA /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		A623F8A51E597282008DF4EA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A623F8A61E597282008DF4EA /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		A623F8A81E597282008DF4EA /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A623F8A91E597282008DF4EA /* PrettyPrintable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyPrintable.swift; sourceTree = "<group>"; };
-		A623F8AB1E597282008DF4EA /* Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
 		A623F8AD1E597282008DF4EA /* VolgofitEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolgofitEndpoint.swift; sourceTree = "<group>"; };
 		A623F8AE1E597282008DF4EA /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		A623F8C31E5976D5008DF4EA /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
@@ -112,6 +109,10 @@
 		A623F8F91E5A17EC008DF4EA /* RestorePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorePassViewController.swift; sourceTree = "<group>"; };
 		A623F8FB1E5A1998008DF4EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A623F8FE1E5A2879008DF4EA /* UIViewController +.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController +.swift"; sourceTree = "<group>"; };
+		A62542C81E5AC4E20093D09C /* ApiResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
+		A62542CC1E5AE69E0093D09C /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		A6E3D8C81E5B3A8600695F8B /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A6E3D8CC1E5B6C6D00695F8B /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +210,8 @@
 				A623F88A1E596FA3008DF4EA /* LoginViewController.swift */,
 				A623F8F71E5A17A3008DF4EA /* RegisterViewController.swift */,
 				A623F8F91E5A17EC008DF4EA /* RestorePassViewController.swift */,
+				A62542CC1E5AE69E0093D09C /* NewsViewController.swift */,
+				A6E3D8CC1E5B6C6D00695F8B /* EditProfileViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -216,15 +219,14 @@
 		A623F8C21E5972D6008DF4EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A623F8AB1E597282008DF4EA /* Trainer.swift */,
 				A623F8AE1E597282008DF4EA /* Workout.swift */,
-				A623F8A11E597282008DF4EA /* Client.swift */,
 				A623F8A41E597282008DF4EA /* Info.swift */,
 				A623F8A51E597282008DF4EA /* Model.swift */,
 				A623F8A61E597282008DF4EA /* News.swift */,
-				A623F8A81E597282008DF4EA /* Person.swift */,
 				A623F8C31E5976D5008DF4EA /* Role.swift */,
 				A623F8C51E597752008DF4EA /* User.swift */,
+				A62542C81E5AC4E20093D09C /* ApiResult.swift */,
+				A6E3D8C81E5B3A8600695F8B /* Profile.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -430,25 +432,25 @@
 				A623F8E11E59D485008DF4EA /* AppConstants.swift in Sources */,
 				A623F8B21E597282008DF4EA /* Endpoint.swift in Sources */,
 				A623F8BD1E597282008DF4EA /* VolgofitEndpoint.swift in Sources */,
+				A62542C91E5AC4E20093D09C /* ApiResult.swift in Sources */,
 				A623F8C41E5976D5008DF4EA /* Role.swift in Sources */,
 				A623F89E1E5971F6008DF4EA /* JSON.swift in Sources */,
 				A623F88B1E596FA3008DF4EA /* LoginViewController.swift in Sources */,
 				A623F8B41E597282008DF4EA /* Info.swift in Sources */,
-				A623F8B11E597282008DF4EA /* Client.swift in Sources */,
 				A623F8B51E597282008DF4EA /* Model.swift in Sources */,
 				A623F8B61E597282008DF4EA /* News.swift in Sources */,
+				A6E3D8CD1E5B6C6D00695F8B /* EditProfileViewController.swift in Sources */,
 				A623F8B91E597282008DF4EA /* PrettyPrintable.swift in Sources */,
 				A623F8F81E5A17A3008DF4EA /* RegisterViewController.swift in Sources */,
 				A623F8891E596FA3008DF4EA /* AppDelegate.swift in Sources */,
 				A623F8B01E597282008DF4EA /* APIError.swift in Sources */,
-				A623F8B81E597282008DF4EA /* Person.swift in Sources */,
-				A623F8BB1E597282008DF4EA /* Trainer.swift in Sources */,
+				A62542CD1E5AE69E0093D09C /* NewsViewController.swift in Sources */,
+				A6E3D8C91E5B3A8600695F8B /* Profile.swift in Sources */,
 				A623F8FF1E5A2879008DF4EA /* UIViewController +.swift in Sources */,
 				A623F8C61E597752008DF4EA /* User.swift in Sources */,
 				A623F8FA1E5A17EC008DF4EA /* RestorePassViewController.swift in Sources */,
 				A623F8B31E597282008DF4EA /* HTTPStatusCode.swift in Sources */,
 				A623F8BE1E597282008DF4EA /* Workout.swift in Sources */,
-				A623F8FC1E5A1998008DF4EA /* README.md in Sources */,
 				A623F8AF1E597282008DF4EA /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

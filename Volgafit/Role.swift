@@ -9,6 +9,10 @@
 import Foundation
 
 class Role: JSONDecodable, PrettyPrintable {
+    static let ADMIN = Role(name: "ADMIN")
+    static let CLIENT = Role(name: "CLIENT")
+    static let TRAINER = Role(name: "TRAINER")
+    
     let id: Int?
     let name: String
     
@@ -25,14 +29,5 @@ class Role: JSONDecodable, PrettyPrintable {
                 return nil
         }
         self.init(id: id, name: name)
-    }
-}
-
-extension Role: JSONCodeable {
-    var json: JSON {
-        return [
-            "id": self.id as AnyObject,
-            "name": self.name as AnyObject
-        ]
     }
 }

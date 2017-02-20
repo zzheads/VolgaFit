@@ -27,6 +27,19 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func showAlertAndAsk(title: String, message: String, style: UIAlertControllerStyle, completion: @escaping (Bool) -> Void) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
+        let okAction = UIAlertAction(title: "OK", style: .default) { action in
+            completion(true)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
+            completion(false)
+        }
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     func dismiss(animated: Bool) {
         _ = navigationController?.popViewController(animated: animated)
     }

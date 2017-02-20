@@ -30,7 +30,7 @@ class RegisterViewController: UIViewController {
             showAlert(title: "Ошибка регистрации", message: "Пользователь с таким именем \(username) уже зарегистрирован.", style: .alert)
             return
         }
-        let newUser = User(username: username, password: password)
+        let newUser = User(username: username, password: password, email: "")
         apiClient.get(endpoint: VolgofitEndpoint.user(id: nil, user: newUser)) {(user: User?) in
             guard let user = user else {
                 self.showAlert(title: "Ошибка регистрации", message: "Не могу зарегистрировать нового пользователя \(newUser).", style: .alert)

@@ -26,10 +26,10 @@ class Workout: JSONDecodable, PrettyPrintable {
     let imagePath: String?
     let beginTime: Date
     let endTime: Date
-    let trainer: Trainer
-    let clients: [Client]?
+    let trainer: User
+    let clients: [User]?
 
-    init(id: Int? = nil, title: String, description: String?, place: String, imagePath: String?, beginTime: Date, endTime: Date, trainer: Trainer, clients: [Client]? = nil) {
+    init(id: Int? = nil, title: String, description: String?, place: String, imagePath: String?, beginTime: Date, endTime: Date, trainer: User, clients: [User]? = nil) {
         self.id = id
         self.title = title
         self.description = description
@@ -49,15 +49,15 @@ class Workout: JSONDecodable, PrettyPrintable {
             let beginTime = json["beginTime"] as? Date,
             let endTime = json["endTime"] as? Date,
             let trainerJson = json["trainer"] as? JSON,
-            let trainer = Trainer(with: trainerJson)
+            let trainer = User(with: trainerJson)
         else {
             return nil
         }
         let description = json["description"] as? String
         let imagePath = json["imagePath"] as? String
-        var clients: [Client]? = nil
+        var clients: [User]? = nil
         if let clientsJson = json["clients"] as? [JSON] {
-            clients = [Client](with: clientsJson)
+            clients = [User](with: clientsJson)
         }
         self.init(id: id, title: title, description: description, place: place, imagePath: imagePath, beginTime: beginTime, endTime: endTime, trainer: trainer, clients: clients)
     }

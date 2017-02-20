@@ -13,10 +13,6 @@ protocol PrettyPrintable: class {
     func prettyPrint(with level: Int) -> String
 }
 
-protocol JSONCodeable {
-    var json: JSON { get }
-}
-
 extension PrettyPrintable {
     var fields: (json: JSON, count: Int) {
         var json = JSON()
