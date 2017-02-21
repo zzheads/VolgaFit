@@ -16,7 +16,8 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var heightTF: UITextField!
     @IBOutlet weak var weightTF: UITextField!
-    @IBOutlet weak var roleSC: UISegmentedControl!
+    @IBOutlet weak var birthDateTF: UITextField!
+    
     @IBOutlet weak var sexSC: UISegmentedControl!
     @IBOutlet weak var photoImageView: UIImageView!
     

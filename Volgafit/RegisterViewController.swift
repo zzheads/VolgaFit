@@ -14,23 +14,49 @@ class RegisterViewController: UIViewController {
     let apiClient = APIClient()
     
     @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var confirmPasswordTF: UITextField!
+    @IBOutlet weak var roleSC: UISegmentedControl!
+    
+    private enum RoleType: Int {
+        case admin = 0
+        case trainer = 1
+        case client = 2
+        
+        var role: Role {
+            switch self {
+            case .admin: return Role(name: "ADMIN")
+            case .trainer: return Role(name: "TRAINER")
+            case .client: return Role(name: "CLIENT")
+            }
+        }
+    }
     
     @IBAction func registerButtonPressed(_ sender: Any) {
         guard
             let registeredUsernames = self.registeredUsernames,
             let username = usernameTF.text,
+            let email = emailTF.text,
             let password = passwordTF.text,
+            let confirm = confirmPasswordTF.text,
             !username.isEmpty,
-            !password.isEmpty
+            !email.isEmpty,
+            !password.isEmpty,
+            !confirm.isEmpty
             else {
                 return
+        }
+        if password != confirm {
+            showAlert(title: "Ошибка", message: "Пароль и подтверждение пароля должны совпадать", style: .alert)
+            return
         }
         if registeredUsernames.contains(username) {
             showAlert(title: "Ошибка регистрации", message: "Пользователь с таким именем \(username) уже зарегистрирован.", style: .alert)
             return
         }
-        let newUser = User(username: username, password: password, email: "")
+        let role = RoleType(rawValue: roleSC.selectedSegmentIndex)?.role
+        let newUser = User(username: username, password: password, email: email, role: role)
         apiClient.get(endpoint: VolgofitEndpoint.user(id: nil, user: newUser)) {(user: User?) in
             guard let user = user else {
                 self.showAlert(title: "Ошибка регистрации", message: "Не могу зарегистрировать нового пользователя \(newUser).", style: .alert)

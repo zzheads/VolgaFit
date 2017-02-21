@@ -54,5 +54,10 @@ class Contact: JSONDecodable {
         }
         self.init(id: id, user: user, street: street, city: city, country: country, zipCode: zipCode, phone: phone, social: social)
     }
-    
+}
+
+extension Contact {
+    var shouldSkipFields: [String]? {
+        return ["contact"]
+    }
 }

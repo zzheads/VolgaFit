@@ -8,22 +8,17 @@
 
 import Foundation
 
-enum Sex: String {
-    case male
-    case female
-}
-
 class Profile: JSONDecodable {
     let id: Int
     let user: User
     let firstName: String
     let lastName: String
-    let sex: Sex?
+    let sex: String?
     let height: Double?
     let weight: Double?
     let birthDate: Date?
 
-    init(id: Int, user: User, firstName: String, lastName: String, sex: Sex?, height: Double?, weight: Double?, birthDate: Date?) {
+    init(id: Int, user: User, firstName: String, lastName: String, sex: String?, height: Double?, weight: Double?, birthDate: Date?) {
         self.id = id
         self.user = user
         self.firstName = firstName
@@ -44,10 +39,7 @@ class Profile: JSONDecodable {
         else {
             return nil
         }
-        var sex: Sex? = nil
-        if let sexValue = json["sex"] as? String {
-            sex = Sex(rawValue: sexValue)
-        }
+        let sex = json["sex"] as? String
         let height = json["height"] as? Double
         let weight = json["weight"] as? Double
         let birthDate = json["birthDate"] as? Date
@@ -57,8 +49,6 @@ class Profile: JSONDecodable {
 
 extension Profile {
     var shouldSkipFields: [String]? {
-        return [
-            "profile"
-        ]
+        return ["profile"]
     }
 }
