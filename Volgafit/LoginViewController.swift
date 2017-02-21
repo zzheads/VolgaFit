@@ -25,6 +25,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.loadDefaults()
         self.updateRememberMeButton()
+        let user = User(id: nil, username: "vasya", password: "kakto", email: "something", enabled: true, role: Role(name: "ADMIN"), profile: nil, trainerOf: nil, clientOf: nil)
+        let workout = Workout(title: "Karateka", description: nil, place: "room #4", imagePath: nil, beginTime: Date(), endTime: Date(), trainer: user)
+        user.trainerOf = [workout]
+        
+        print("\(workout.json)")
     }
 
     override func didReceiveMemoryWarning() {

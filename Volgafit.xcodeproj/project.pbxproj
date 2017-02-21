@@ -55,6 +55,7 @@
 		A62542CD1E5AE69E0093D09C /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62542CC1E5AE69E0093D09C /* NewsViewController.swift */; };
 		A6E3D8C91E5B3A8600695F8B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E3D8C81E5B3A8600695F8B /* Profile.swift */; };
 		A6E3D8CD1E5B6C6D00695F8B /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E3D8CC1E5B6C6D00695F8B /* EditProfileViewController.swift */; };
+		A6E4BAE11E5C715100B86E9E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E4BAE01E5C715100B86E9E /* Contact.swift */; };
 		F148075BBE5368ADA9574096 /* Pods_Volgafit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886C5F96F50D8D410DEB49E8 /* Pods_Volgafit.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +70,7 @@
 		A623F88F1E596FA3008DF4EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A623F8921E596FA3008DF4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A623F8941E596FA3008DF4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A623F89B1E597149008DF4EA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A623F89B1E597149008DF4EA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A623F89D1E5971F6008DF4EA /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		A623F89F1E597282008DF4EA /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A623F8A01E597282008DF4EA /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 		A62542CC1E5AE69E0093D09C /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A6E3D8C81E5B3A8600695F8B /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A6E3D8CC1E5B6C6D00695F8B /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		A6E4BAE01E5C715100B86E9E /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				A623F8C51E597752008DF4EA /* User.swift */,
 				A62542C81E5AC4E20093D09C /* ApiResult.swift */,
 				A6E3D8C81E5B3A8600695F8B /* Profile.swift */,
+				A6E4BAE01E5C715100B86E9E /* Contact.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				A623F8B61E597282008DF4EA /* News.swift in Sources */,
 				A6E3D8CD1E5B6C6D00695F8B /* EditProfileViewController.swift in Sources */,
 				A623F8B91E597282008DF4EA /* PrettyPrintable.swift in Sources */,
+				A6E4BAE11E5C715100B86E9E /* Contact.swift in Sources */,
 				A623F8F81E5A17A3008DF4EA /* RegisterViewController.swift in Sources */,
 				A623F8891E596FA3008DF4EA /* AppDelegate.swift in Sources */,
 				A623F8B01E597282008DF4EA /* APIError.swift in Sources */,
@@ -574,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82DDDE7840FED793417E03FB /* Pods-Volgafit.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RS93W547X8;
 				INFOPLIST_FILE = Volgafit/Info.plist;
@@ -589,6 +594,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 553B7CB4BFFD4550A894F281 /* Pods-Volgafit.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RS93W547X8;
 				INFOPLIST_FILE = Volgafit/Info.plist;

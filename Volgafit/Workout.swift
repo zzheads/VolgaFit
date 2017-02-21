@@ -62,3 +62,12 @@ class Workout: JSONDecodable, PrettyPrintable {
         self.init(id: id, title: title, description: description, place: place, imagePath: imagePath, beginTime: beginTime, endTime: endTime, trainer: trainer, clients: clients)
     }
 }
+
+extension Workout {
+    var shouldSkipFields: [String]? {
+        return [
+            "trainerOf",
+            "clientOf"
+        ]
+    }
+}

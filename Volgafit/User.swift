@@ -15,9 +15,13 @@ class User: JSONDecodable, PrettyPrintable {
     let email: String
     let enabled: Bool?
     let role: Role?
-    let profile: Profile?
+    var profile: Profile?
+    var contact: Contact?
+    var trainerOf: [Workout]?
+    var clientOf: [Workout]?
+    let imagePath: String?
     
-    init(id: Int? = nil, username: String, password: String, email: String, enabled: Bool? = nil, role: Role? = nil, profile: Profile? = nil) {
+    init(id: Int? = nil, username: String, password: String, email: String, enabled: Bool? = nil, role: Role? = nil, profile: Profile? = nil, contact: Contact? = nil, trainerOf: [Workout]? = nil, clientOf: [Workout]? = nil, imagePath: String? = nil) {
         self.id = id
         self.username = username
         self.password = password
@@ -25,6 +29,10 @@ class User: JSONDecodable, PrettyPrintable {
         self.enabled = enabled
         self.role = role
         self.profile = profile
+        self.contact = contact
+        self.trainerOf = trainerOf
+        self.clientOf = clientOf
+        self.imagePath = imagePath
     }
     
     required convenience init?(with json: JSON) {
@@ -35,12 +43,38 @@ class User: JSONDecodable, PrettyPrintable {
             let email = json["email"] as? String,
             let enabled = json["enabled"] as? Bool,
             let roleJson = json["role"] as? JSON,
-            let role = Role(with: roleJson),
-            let profileJson = json["profile"] as? JSON,
-            let profile = Profile(with: profileJson)
+            let role = Role(with: roleJson)
             else {
                 return nil
         }
-        self.init(id: id, username: username, password: password, email: email, enabled: enabled, role: role, profile: profile)
+        var profile: Profile? = nil
+        if let profileJson = json["profile"] as? JSON {
+            profile = Profile(with: profileJson)
+        }
+        var contact: Contact? = nil
+        if let contactJson = json["contact"] as? JSON {
+            contact = Contact(with: contactJson)
+        }
+        var trainerOf: [Workout]? = nil
+        var clientOf: [Workout]? = nil
+        if let trainerOfJson = json["trainerOf"] as? [JSON] {
+            trainerOf = [Workout](with: trainerOfJson)
+        }
+        if let clientOfJson = json["clientOf"] as? [JSON] {
+            clientOf = [Workout](with: clientOfJson)
+        }
+        let imagePath = json["imagePath"] as? String
+        
+        self.init(id: id, username: username, password: password, email: email, enabled: enabled, role: role, profile: profile, contact: contact, trainerOf: trainerOf, clientOf: clientOf, imagePath: imagePath)
+    }
+}
+
+extension User {
+    var shouldSkipFields: [String]? {
+        return [
+            "user",
+            "trainer",
+            "clients"
+        ]
     }
 }

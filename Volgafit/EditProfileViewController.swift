@@ -46,7 +46,7 @@ extension EditProfileViewController {
                 self.dismiss(animated: true)
                 return
         }
-        let profile = Profile(id: 0, user: user, firstName: firstname, lastName: lastname, height: height, weight: weight, imagePath: nil, birthDate: nil, street: nil, city: nil, country: nil, zipCode: nil, phone: nil, social: nil, trainerOf: nil, clientOf: nil)
+        let profile = Profile(id: 0, user: user, firstName: firstname, lastName: lastname, sex: nil, height: height, weight: weight, birthDate: nil)
         delegate(profile)
         self.dismiss(animated: true)
     }

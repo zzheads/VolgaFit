@@ -14,7 +14,7 @@ import Foundation
 //private String createdBy = "Alexey Papin";
 //private String poweredBy[] = {"JavaSpring", "MySQL"};
 
-class Info: JSONDecodable, PrettyPrintable {
+class Info: JSONDecodable, PrettyPrintable {    
     let artifact: String
     let version: String
     let lastModified: String

@@ -4,4 +4,5 @@ use_frameworks!
 
 target 'Volgafit' do
     pod 'Alamofire', '~> 4.3'
+    pod 'Nuke', '~> 5.0'
 end
