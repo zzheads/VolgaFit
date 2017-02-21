@@ -20,21 +20,20 @@ class EditProfileViewController: UIViewController {
     
     @IBOutlet weak var sexSC: UISegmentedControl!
     @IBOutlet weak var photoImageView: UIImageView!
-    
-}
 
-extension EditProfileViewController {
     @IBAction func imagePressed(_ sender: Any) {
     }
-    
-    @IBAction func saveButtonPressed(_ sender: Any) {
+ 
+    @IBAction func savePressed(_ sender: Any) {
         guard
             let firstname = firstNameTF.text,
             let lastname = lastNameTF.text,
             let heightText = heightTF.text,
             let weightText = weightTF.text,
+            let birthDate = birthDateTF.text,
             !firstname.isEmpty,
             !lastname.isEmpty,
+            !birthDate.isEmpty,
             let height = Double(heightText),
             let weight = Double(weightText)
             else {

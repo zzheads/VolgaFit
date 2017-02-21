@@ -12,6 +12,7 @@ import UIKit
 class RegisterViewController: UIViewController {
     var registeredUsernames: [String]?
     let apiClient = APIClient()
+    var profile: Profile?
     
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
@@ -56,7 +57,8 @@ class RegisterViewController: UIViewController {
             return
         }
         let role = RoleType(rawValue: roleSC.selectedSegmentIndex)?.role
-        let newUser = User(username: username, password: password, email: email, role: role)
+        let newUser = User(username: username, password: password, email: email, role: role, profile: self.profile)
+        print("\(profile?.json)")
         apiClient.get(endpoint: VolgofitEndpoint.user(id: nil, user: newUser)) {(user: User?) in
             guard let user = user else {
                 self.showAlert(title: "Ошибка регистрации", message: "Не могу зарегистрировать нового пользователя \(newUser).", style: .alert)
@@ -81,4 +83,30 @@ class RegisterViewController: UIViewController {
             }
         }
     }
+    
+    func delegateForProfile(profile: Profile) {
+        self.profile = profile
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueId = segue.identifier else {
+            return
+        }
+        if (segueId == "toEditProfile") {
+            let controller = segue.destination as? EditProfileViewController
+            controller?.delegate = self.delegateForProfile
+        }
+    }
+}
+
+extension RegisterViewController {
+
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func profileButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "toEditProfile", sender: self)
+    }
+
 }

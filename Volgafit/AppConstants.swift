@@ -17,10 +17,10 @@ enum AppFonts {
     
     var font: UIFont {
         switch self {
-        case .light(let size):return UIFont(name: "SanFranciscoDisplay-Light.otf", size: size)!
-        case .medium(let size):return UIFont(name: "SanFranciscoDisplay-Medium.otf", size: size)!
-        case .regular(let size):return UIFont(name: "SanFranciscoDisplay-Regular.otf", size: size)!
-        case .bold(let size):return UIFont(name: "SanFranciscoDisplay-Bold.otf", size: size)!
+        case .light(let size):return UIFont(name: "SanFranciscoDisplay-Light", size: size)!
+        case .medium(let size):return UIFont(name: "SanFranciscoDisplay-Medium", size: size)!
+        case .regular(let size):return UIFont(name: "SanFranciscoDisplay-Regular", size: size)!
+        case .bold(let size):return UIFont(name: "SanFranciscoDisplay-Bold", size: size)!
         }
     }
 }

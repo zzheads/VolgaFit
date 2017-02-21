@@ -435,7 +435,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Регистрация пользователя" id="hY1-Fv-8Ak">
-                        <barButtonItem key="backBarButtonItem" title=" " id="Hlg-Mp-5St"/>
+                        <barButtonItem key="leftBarButtonItem" title="Отмена" id="DC5-3W-MvL">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="eGV-3P-9TL" id="Eui-Bd-7rw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Профиль" id="yh7-9c-E56">
+                            <connections>
+                                <action selector="profileButtonPressed:" destination="eGV-3P-9TL" id="O3s-5Z-exV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="confirmPasswordTF" destination="txT-VA-fpS" id="Xad-Ne-FCa"/>
@@ -689,9 +698,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Профиль" id="s4t-nJ-80U">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="wLd-p2-wBf">
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="wLd-p2-wBf">
                             <connections>
-                                <action selector="saveButtonPressed:" destination="VEx-7Z-649" id="Bc3-Hg-SKF"/>
+                                <action selector="savePressed:" destination="VEx-7Z-649" id="80E-HD-3zc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -701,6 +710,7 @@
                         <outlet property="heightTF" destination="157-0W-XaU" id="zxB-Ve-uFa"/>
                         <outlet property="lastNameTF" destination="IQq-Fv-uTI" id="izT-kh-zyX"/>
                         <outlet property="photoImageView" destination="mO4-oO-4PO" id="DxO-Nf-mei"/>
+                        <outlet property="savePressed" destination="wLd-p2-wBf" id="sau-DY-jNP"/>
                         <outlet property="sexSC" destination="c2J-uE-vTO" id="MbT-dh-8zH"/>
                         <outlet property="weightTF" destination="7YN-Bt-N5x" id="v8F-RK-Awb"/>
                     </connections>
