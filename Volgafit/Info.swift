@@ -14,14 +14,14 @@ import Foundation
 //private String createdBy = "Alexey Papin";
 //private String poweredBy[] = {"JavaSpring", "MySQL"};
 
-class Info: JSONDecodable, PrettyPrintable {    
+struct Info: JSONDecodable {
     let artifact: String
     let version: String
     let lastModified: String
     let createdBy: String
     let poweredBy: [String]
     
-    required init?(with json: JSON) {
+    init?(with json: JSON) {
         guard
             let artifact = json["artifact"] as? String,
             let version = json["version"] as? String,

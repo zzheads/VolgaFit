@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ApiResult: JSONDecodable, PrettyPrintable {
+struct ApiResult: JSONDecodable {
     let success: Bool
     let message: String
     
@@ -17,7 +17,7 @@ class ApiResult: JSONDecodable, PrettyPrintable {
         self.message = message
     }
     
-    required convenience init?(with json: JSON) {
+    init?(with json: JSON) {
         guard
             let success = json["success"] as? Bool,
             let message = json["message"] as? String

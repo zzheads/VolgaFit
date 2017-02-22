@@ -15,7 +15,7 @@ import Foundation
 //private Set<String> hashTags = new HashSet<>(0);
 //private String image;
 
-class News: JSONDecodable, PrettyPrintable {
+struct News: JSONDecodable {
     let id: Int
     let date: String
     let text: String
@@ -32,7 +32,7 @@ class News: JSONDecodable, PrettyPrintable {
         self.image = image
     }
     
-    required convenience init?(with json: JSON) {
+    init?(with json: JSON) {
         guard
             let id = json["id"] as? Int,
             let date = json["date"] as? String,

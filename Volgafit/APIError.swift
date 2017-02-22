@@ -39,7 +39,7 @@ enum APIError: Error {
     }
 }
 
-class ServerError: Error, JSONDecodable, PrettyPrintable {
+struct ServerError: Error, JSONDecodable {
     let error: String
     let exception: String
     let message: String
@@ -47,7 +47,7 @@ class ServerError: Error, JSONDecodable, PrettyPrintable {
     let status: Int
     let timestamp: UInt64
     
-    required init?(with json: JSON) {
+    init?(with json: JSON) {
         guard
             let error = json["error"] as? String,
             let exception = json["exception"] as? String,

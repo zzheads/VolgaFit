@@ -18,6 +18,6 @@ class NewsViewController: UIViewController {
         guard let loggedUser = self.loggedUser else {
             return
         }
-        print("News controller: logged as \(loggedUser.prettyPrint(with: 0))")
+        print("News controller: logged as \(loggedUser.json)")
     }
 }

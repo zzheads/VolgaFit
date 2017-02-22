@@ -18,7 +18,7 @@ import Foundation
 //private Trainer trainer;
 //private List<Client> clients;
 
-class Workout: JSONDecodable, PrettyPrintable {
+struct Workout: JSONDecodable {
     let id: Int?
     let title: String
     let description: String?
@@ -41,7 +41,7 @@ class Workout: JSONDecodable, PrettyPrintable {
         self.clients = clients
     }
     
-    required convenience init?(with json: JSON) {
+    init?(with json: JSON) {
         guard
             let id = json["id"] as? Int,
             let title = json["title"] as? String,
@@ -60,14 +60,5 @@ class Workout: JSONDecodable, PrettyPrintable {
             clients = [User](with: clientsJson)
         }
         self.init(id: id, title: title, description: description, place: place, imagePath: imagePath, beginTime: beginTime, endTime: endTime, trainer: trainer, clients: clients)
-    }
-}
-
-extension Workout {
-    var shouldSkipFields: [String]? {
-        return [
-            "trainerOf",
-            "clientOf"
-        ]
     }
 }

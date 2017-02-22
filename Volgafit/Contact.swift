@@ -17,7 +17,7 @@ import Foundation
 //private String phone;
 //private String[] social;
 
-class Contact: JSONDecodable {
+struct Contact: JSONDecodable {
     let id: Int
     let user: User
     var street: String
@@ -38,7 +38,7 @@ class Contact: JSONDecodable {
         self.social = social
     }
 
-    required convenience init?(with json: JSON) {
+    init?(with json: JSON) {
         guard
             let id = json["id"] as? Int,
             let userJson = json["user"] as? JSON,
@@ -53,11 +53,5 @@ class Contact: JSONDecodable {
                 return nil
         }
         self.init(id: id, user: user, street: street, city: city, country: country, zipCode: zipCode, phone: phone, social: social)
-    }
-}
-
-extension Contact {
-    var shouldSkipFields: [String]? {
-        return ["contact"]
     }
 }

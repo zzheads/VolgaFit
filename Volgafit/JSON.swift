@@ -18,60 +18,27 @@ typealias TaskCompletion<J> = (J?, HTTPURLResponse?, Error?) -> Void
 typealias JSONTask = URLSessionDataTask
 typealias URLSessionDataTaskCompletion = (Data?, URLResponse?, Error?) -> Void
 
-protocol JSONDecodable: class {
-    var shouldSkipFields: [String]? { get }
+protocol JSONDecodable {
     init?(with json: JSON)
-    func json(shouldSkip fields: [String]?) -> JSON
     var json: JSON { get }
 }
 
 typealias Parse<J, T: JSONDecodable> = ((J) -> T?) where T: JSONDecodable
 
 extension JSONDecodable {
-    var shouldSkipFields: [String]? {
-        return nil
-    }
     
-    private func include(property: Mirror.Child, shouldSkip fields: [String]?) -> Bool {
-        if let shouldSkipFields = fields {
-            for field in shouldSkipFields {
-                if (property.label == field) {
-                    return false
-                }
-            }
-        }
-        if let shouldSkipFields = self.shouldSkipFields {
-            for field in shouldSkipFields {
-                if (property.label == field) {
-                    return false
-                }
-            }
-        }
-        return true
-    }
-    
-    func json(shouldSkip fields: [String]?) -> JSON {
+    var json: JSON {
         var json: JSON = [:]
         for property in Mirror(reflecting: self).children {
             if let label = property.label {
-                if include(property: property, shouldSkip: fields) {
-                    if let value = property.value as? JSONDecodable {
-                        if include(property: property, shouldSkip: fields) {
-                            json[label] = value.json(shouldSkip: fields) as AnyObject?
-                        } else {
-                            json[label] = property.value as AnyObject?
-                        }
-                    } else {
-                        json[label] = property.value as AnyObject?
-                    }
+                if let value = property.value as? JSONDecodable {
+                    json[label] = value.json as AnyObject?
+                } else {
+                    json[label] = property.value as AnyObject?
                 }
             }
         }
         return json
-    }
-    
-    var json: JSON {
-        return self.json(shouldSkip: self.shouldSkipFields)
     }
     
     static var parse: Parse<JSON, Self> {

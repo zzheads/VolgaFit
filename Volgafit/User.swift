@@ -8,18 +8,18 @@
 
 import Foundation
 
-class User: JSONDecodable, PrettyPrintable {
-    let id: Int?
-    let username: String
-    let password: String
-    let email: String
-    let enabled: Bool?
-    let role: Role?
+struct User: JSONDecodable {
+    var id: Int?
+    var username: String
+    var password: String
+    var email: String
+    var enabled: Bool?
+    var role: Role?
     var profile: Profile?
     var contact: Contact?
     var trainerOf: [Workout]?
     var clientOf: [Workout]?
-    let imagePath: String?
+    var imagePath: String?
     
     init(id: Int? = nil, username: String, password: String, email: String, enabled: Bool? = nil, role: Role? = nil, profile: Profile? = nil, contact: Contact? = nil, trainerOf: [Workout]? = nil, clientOf: [Workout]? = nil, imagePath: String? = nil) {
         self.id = id
@@ -35,7 +35,7 @@ class User: JSONDecodable, PrettyPrintable {
         self.imagePath = imagePath
     }
     
-    required convenience init?(with json: JSON) {
+    init?(with json: JSON) {
         guard
             let id = json["id"] as? Int,
             let username = json["username"] as? String,
@@ -66,15 +66,5 @@ class User: JSONDecodable, PrettyPrintable {
         let imagePath = json["imagePath"] as? String
         
         self.init(id: id, username: username, password: password, email: email, enabled: enabled, role: role, profile: profile, contact: contact, trainerOf: trainerOf, clientOf: clientOf, imagePath: imagePath)
-    }
-}
-
-extension User {
-    var shouldSkipFields: [String]? {
-        return [
-            "user",
-            "trainer",
-            "clients"
-        ]
     }
 }

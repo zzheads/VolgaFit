@@ -21,7 +21,6 @@
 		A623F8B41E597282008DF4EA /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A41E597282008DF4EA /* Info.swift */; };
 		A623F8B51E597282008DF4EA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A51E597282008DF4EA /* Model.swift */; };
 		A623F8B61E597282008DF4EA /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A61E597282008DF4EA /* News.swift */; };
-		A623F8B91E597282008DF4EA /* PrettyPrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8A91E597282008DF4EA /* PrettyPrintable.swift */; };
 		A623F8BD1E597282008DF4EA /* VolgofitEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8AD1E597282008DF4EA /* VolgofitEndpoint.swift */; };
 		A623F8BE1E597282008DF4EA /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8AE1E597282008DF4EA /* Workout.swift */; };
 		A623F8C41E5976D5008DF4EA /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623F8C31E5976D5008DF4EA /* Role.swift */; };
@@ -79,7 +78,6 @@
 		A623F8A41E597282008DF4EA /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		A623F8A51E597282008DF4EA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A623F8A61E597282008DF4EA /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		A623F8A91E597282008DF4EA /* PrettyPrintable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyPrintable.swift; sourceTree = "<group>"; };
 		A623F8AD1E597282008DF4EA /* VolgofitEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolgofitEndpoint.swift; sourceTree = "<group>"; };
 		A623F8AE1E597282008DF4EA /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		A623F8C31E5976D5008DF4EA /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				A623F89D1E5971F6008DF4EA /* JSON.swift */,
-				A623F8A91E597282008DF4EA /* PrettyPrintable.swift */,
 				A623F8C21E5972D6008DF4EA /* Resources */,
 			);
 			name = Model;
@@ -443,7 +440,6 @@
 				A623F8B51E597282008DF4EA /* Model.swift in Sources */,
 				A623F8B61E597282008DF4EA /* News.swift in Sources */,
 				A6E3D8CD1E5B6C6D00695F8B /* EditProfileViewController.swift in Sources */,
-				A623F8B91E597282008DF4EA /* PrettyPrintable.swift in Sources */,
 				A6E4BAE11E5C715100B86E9E /* Contact.swift in Sources */,
 				A623F8F81E5A17A3008DF4EA /* RegisterViewController.swift in Sources */,
 				A623F8891E596FA3008DF4EA /* AppDelegate.swift in Sources */,

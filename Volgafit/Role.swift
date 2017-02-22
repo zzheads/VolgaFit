@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Role: JSONDecodable, PrettyPrintable {
+struct Role: JSONDecodable {
     static let ADMIN = Role(name: "ADMIN")
     static let CLIENT = Role(name: "CLIENT")
     static let TRAINER = Role(name: "TRAINER")
@@ -21,7 +21,7 @@ class Role: JSONDecodable, PrettyPrintable {
         self.name = name
     }
     
-    required convenience init?(with json: JSON) {
+    init?(with json: JSON) {
         guard
             let id = json["id"] as? Int,
             let name = json["name"] as? String

@@ -20,7 +20,7 @@
         <scene sceneID="hb1-Mx-nRV">
             <objects>
                 <navigationController id="7qw-9y-A2a" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="cPf-EK-ZP5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="cPf-EK-ZP5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -378,7 +378,7 @@
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="85Z-7j-5Cb">
-                                <rect key="frame" x="77.5" y="429" width="220" height="29"/>
+                                <rect key="frame" x="78" y="429" width="220" height="29"/>
                                 <color key="backgroundColor" red="0.81012022500000003" green="0.84711772200000002" blue="0.86366039510000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="k4m-Hv-1Y1"/>
@@ -710,7 +710,6 @@
                         <outlet property="heightTF" destination="157-0W-XaU" id="zxB-Ve-uFa"/>
                         <outlet property="lastNameTF" destination="IQq-Fv-uTI" id="izT-kh-zyX"/>
                         <outlet property="photoImageView" destination="mO4-oO-4PO" id="DxO-Nf-mei"/>
-                        <outlet property="savePressed" destination="wLd-p2-wBf" id="sau-DY-jNP"/>
                         <outlet property="sexSC" destination="c2J-uE-vTO" id="MbT-dh-8zH"/>
                         <outlet property="weightTF" destination="7YN-Bt-N5x" id="v8F-RK-Awb"/>
                     </connections>

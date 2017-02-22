@@ -20,10 +20,10 @@ import Foundation
 //}
 
 
-class Model: JSONDecodable, PrettyPrintable {
+struct Model: JSONDecodable {
     let endpoints: [String: String]
     
-    required init?(with json: JSON) {
+    init?(with json: JSON) {
         guard
             let endpoints = json["endpoints"] as? [String: String]
             else {

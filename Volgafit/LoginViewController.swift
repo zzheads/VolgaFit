@@ -114,7 +114,7 @@ extension LoginViewController {
                                                         print("Cand send mail")
                                                         return
                                                     }
-                                                    print(mailResult.prettyPrint(with: 0))
+                                                    print(mailResult.json)
                                                     self.showAlert(title: "Письмо отправлено", message: "Пожалуйста, активируйте пользователя \(username) перейдя но ссылке указанной в письме.", style: .alert)
                                                 }
                                             }
@@ -126,7 +126,7 @@ extension LoginViewController {
             }
             else {
                 self.loggedUser = user
-                print("\(loginResult.prettyPrint(with: 0))")
+                print("\(loginResult.json)")
                 self.performSegue(withIdentifier: "toNewsScreen", sender: self)
             }
         }

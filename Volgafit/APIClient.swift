@@ -14,7 +14,7 @@ class APIClient {
     static func failureHandler<T>(completion: @escaping (T?) -> Void) -> (DataResponse<Any>) -> Void {
         return { (response: DataResponse<Any>) in
             if let value = response.result.value, let serverError = ServerError(with: value as! JSON) {
-                print("\(serverError.prettyPrint(with: 0))")
+                print("\(serverError.json)")
             } else {
                 guard
                 let httpResponse = response.response,

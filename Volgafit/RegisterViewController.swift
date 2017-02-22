@@ -10,9 +10,10 @@ import Foundation
 import UIKit
 
 class RegisterViewController: UIViewController {
-    var registeredUsernames: [String]?
+    var registeredUsernames: [String] = []
     let apiClient = APIClient()
     var profile: Profile?
+    var newUser = User(username: "", password: "", email: "")
     
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
@@ -36,7 +37,6 @@ class RegisterViewController: UIViewController {
     
     @IBAction func registerButtonPressed(_ sender: Any) {
         guard
-            let registeredUsernames = self.registeredUsernames,
             let username = usernameTF.text,
             let email = emailTF.text,
             let password = passwordTF.text,
@@ -57,11 +57,15 @@ class RegisterViewController: UIViewController {
             return
         }
         let role = RoleType(rawValue: roleSC.selectedSegmentIndex)?.role
-        let newUser = User(username: username, password: password, email: email, role: role, profile: self.profile)
+        self.newUser.username = username
+        self.newUser.email = email
+        self.newUser.password = password
+        self.newUser.role = role
+        self.newUser.profile = self.profile
         print("\(profile?.json)")
-        apiClient.get(endpoint: VolgofitEndpoint.user(id: nil, user: newUser)) {(user: User?) in
+        apiClient.get(endpoint: VolgofitEndpoint.user(id: nil, user: self.newUser)) {(user: User?) in
             guard let user = user else {
-                self.showAlert(title: "Ошибка регистрации", message: "Не могу зарегистрировать нового пользователя \(newUser).", style: .alert)
+                self.showAlert(title: "Ошибка регистрации", message: "Не могу зарегистрировать нового пользователя \(self.newUser).", style: .alert)
                 return
             }
             self.showAlertAndDismiss(title: "Подтвердите адрес", message: "Новый пользователь \(user.username) зарегистрирован, для его активации необходимо подтвердить Ваш адрес электронной почты. Соответствующее письмо отправлено на Ваш адрес.", style: .alert)
@@ -77,9 +81,8 @@ class RegisterViewController: UIViewController {
                 return
             }
             print(users)
-            self.registeredUsernames = []
             for user in users {
-                self.registeredUsernames?.append(user.username)
+                self.registeredUsernames.append(user.username)
             }
         }
     }
@@ -94,6 +97,7 @@ class RegisterViewController: UIViewController {
         }
         if (segueId == "toEditProfile") {
             let controller = segue.destination as? EditProfileViewController
+            controller?.user = self.newUser
             controller?.delegate = self.delegateForProfile
         }
     }
