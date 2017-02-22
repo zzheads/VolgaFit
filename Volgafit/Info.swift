@@ -14,14 +14,22 @@ import Foundation
 //private String createdBy = "Alexey Papin";
 //private String poweredBy[] = {"JavaSpring", "MySQL"};
 
-struct Info: JSONDecodable {
+class Info: JSONDecodable {
     let artifact: String
     let version: String
     let lastModified: String
     let createdBy: String
     let poweredBy: [String]
     
-    init?(with json: JSON) {
+    init(artifact: String, version: String, lastModified: String, createdBy: String, poweredBy: [String]) {
+        self.artifact = artifact
+        self.version = version
+        self.lastModified = lastModified
+        self.createdBy = createdBy
+        self.poweredBy = poweredBy
+    }
+    
+    required convenience init?(with json: JSON) {
         guard
             let artifact = json["artifact"] as? String,
             let version = json["version"] as? String,
@@ -31,10 +39,6 @@ struct Info: JSONDecodable {
             else {
                 return nil
         }
-        self.artifact = artifact
-        self.version = version
-        self.lastModified = lastModified
-        self.createdBy = createdBy
-        self.poweredBy = poweredBy
+        self.init(artifact: artifact, version: version, lastModified: lastModified, createdBy: createdBy, poweredBy: poweredBy)
     }
 }

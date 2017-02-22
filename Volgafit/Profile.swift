@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct Profile: JSONDecodable {
+class Profile: JSONDecodable {
+    static let shouldSkipFields: [String]? = ["profile"]
+    
     let id: Int
     let user: User
     let firstName: String
@@ -29,7 +31,7 @@ struct Profile: JSONDecodable {
         self.birthDate = birthDate
     }
     
-    init?(with json: JSON) {
+    required convenience init?(with json: JSON) {
         guard
             let id = json["id"] as? Int,
             let userJson = json["user"] as? JSON,

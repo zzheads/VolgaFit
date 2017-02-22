@@ -18,7 +18,9 @@ import Foundation
 //private Trainer trainer;
 //private List<Client> clients;
 
-struct Workout: JSONDecodable {
+class Workout: JSONDecodable {
+    static let shouldSkipFields: [String]? = ["trainerOf", "clientOf"]
+    
     let id: Int?
     let title: String
     let description: String?
@@ -41,7 +43,7 @@ struct Workout: JSONDecodable {
         self.clients = clients
     }
     
-    init?(with json: JSON) {
+    required convenience init?(with json: JSON) {
         guard
             let id = json["id"] as? Int,
             let title = json["title"] as? String,

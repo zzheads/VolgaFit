@@ -20,19 +20,26 @@ typealias URLSessionDataTaskCompletion = (Data?, URLResponse?, Error?) -> Void
 
 protocol JSONDecodable {
     init?(with json: JSON)
+    
+    static var shouldSkipFields: [String]? { get }
     var json: JSON { get }
 }
 
 typealias Parse<J, T: JSONDecodable> = ((J) -> T?) where T: JSONDecodable
 
 extension JSONDecodable {
+    static var shouldSkipFields: [String]? {
+        return nil
+    }
     
     var json: JSON {
         var json: JSON = [:]
         for property in Mirror(reflecting: self).children {
             if let label = property.label {
-                if let value = property.value as? JSONDecodable {
-                    json[label] = value.json as AnyObject?
+                let value = property.value as? JSONDecodable
+                let skip = (Self.shouldSkipFields?.contains(label))!
+                if value != nil && !skip {
+                    json[label] = value?.json as AnyObject?
                 } else {
                     json[label] = property.value as AnyObject?
                 }

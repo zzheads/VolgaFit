@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct User: JSONDecodable {
+class User: JSONDecodable {
+    static let shouldSkipFields: [String]? = ["user", "trainer", "clients"]
+    
     var id: Int?
     var username: String
     var password: String
@@ -35,7 +37,7 @@ struct User: JSONDecodable {
         self.imagePath = imagePath
     }
     
-    init?(with json: JSON) {
+    required convenience init?(with json: JSON) {
         guard
             let id = json["id"] as? Int,
             let username = json["username"] as? String,

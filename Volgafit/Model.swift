@@ -20,15 +20,19 @@ import Foundation
 //}
 
 
-struct Model: JSONDecodable {
+class Model: JSONDecodable {
     let endpoints: [String: String]
     
-    init?(with json: JSON) {
+    init(endpoints: [String: String]) {
+        self.endpoints = endpoints
+    }
+    
+    required convenience init?(with json: JSON) {
         guard
             let endpoints = json["endpoints"] as? [String: String]
             else {
                 return nil
         }
-        self.endpoints = endpoints
+        self.init(endpoints: endpoints)
     }
 }
